@@ -2,19 +2,19 @@ package polymorphism;
 
 public class SamsungTV implements TV{
 	
-	private SonySpeaker speaker;
+	private Speaker speaker;
 	private int price;
 	
 	public SamsungTV() {
 		System.out.println("====> SamsungTV(1) 梓端 持失");
 	}
 	
-	public SamsungTV(SonySpeaker speaker) {
+	public SamsungTV(Speaker speaker) {
 		System.out.println("====> SamsungTV(2) 梓端 持失");
 		this.speaker = speaker;
 	}
 	
-	public SamsungTV(SonySpeaker speaker, int price) {
+	public SamsungTV(Speaker speaker, int price) {
 		System.out.println("====> SamsungTV(3) 梓端 持失");
 		this.speaker = speaker;
 		this.price = price;

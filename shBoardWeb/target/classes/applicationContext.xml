@@ -6,9 +6,10 @@
 
 	<!-- <bean id="tv" class="polymorphism.SamsungTV" lazy-init="true" init-method="initMethod" destroy-method="destroyMethod"/> -->
 	<bean id="tv" class="polymorphism.SamsungTV">
-		<constructor-arg ref="sony"></constructor-arg>
+		<constructor-arg ref="apple"></constructor-arg>
 		<constructor-arg value="2700000"></constructor-arg>
 	</bean>
 	
+	<bean id="apple" class="polymorphism.AppleSpeaker"></bean>
 	<bean id="sony" class="polymorphism.SonySpeaker"></bean>
 </beans>
