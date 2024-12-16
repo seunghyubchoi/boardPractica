@@ -2,7 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 
 	<!-- <bean id="tv" class="polymorphism.SamsungTV" lazy-init="true" init-method="initMethod" destroy-method="destroyMethod"/> -->
@@ -15,10 +17,13 @@
 	</bean> 
 	-->
 	
+	<context:component-scan base-package="polymorphism"></context:component-scan>
+	
+	<!-- component-scan 으로 주석처리
 	<bean id="tv" class="polymorphism.SamsungTV" p:speaker-ref="sony" p:price="2700000">
-    	<!--  p 네임스페이스 추가로 주석처리 -->		
-		<!-- <property name="speaker" ref="apple"></property>
-		<property name="price" value="2700000"></property>  -->
+    	//p 네임스페이스 추가로 주석처리	
+		<property name="speaker" ref="apple"></property>
+		<property name="price" value="2700000"></property> 
 	</bean>
 	
 	<bean id="apple" class="polymorphism.AppleSpeaker"></bean>
@@ -32,4 +37,5 @@
 			</list>
 		</property>
 	</bean>
+	-->
 </beans>
