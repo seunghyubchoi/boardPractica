@@ -18,6 +18,7 @@
 	-->
 	
 	<context:component-scan base-package="polymorphism"></context:component-scan>
+	<bean class="polymorphism.AppleSpeaker"></bean>
 	
 	<!-- component-scan 으로 주석처리
 	<bean id="tv" class="polymorphism.SamsungTV" p:speaker-ref="sony" p:price="2700000">
