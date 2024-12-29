@@ -13,14 +13,16 @@
 	<bean id="log" class="com.springbook.biz.common.LogAdvice"></bean>
 	<bean id="before" class="com.springbook.biz.common.BeforeAdvice"></bean>
 	<bean id="afterReturning" class="com.springbook.biz.common.AfterReturningAdvice"></bean>
+	<bean id="afterThrowing" class="com.springbook.biz.common.AfterThrowingAdvice"></bean>
 	
 	<aop:config>
-		<!-- <aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))" /> -->
-		<aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))" />
-		<aop:aspect ref="afterReturning">
+		<aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))" /> 
+		<!-- <aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))" /> -->
+		<aop:aspect ref="afterThrowing">
 			<!-- <aop:after pointcut-ref="getPointcut" method="printLog" /> -->
 			<!-- <aop:before pointcut-ref="allPointcut" method="beforeLog" /> -->
-			<aop:after-returning pointcut-ref="getPointcut" method="afterLog" />
+			<!-- <aop:after-returning pointcut-ref="getPointcut" method="afterLog" /> -->
+			<aop:after-throwing pointcut-ref="allPointcut" method="exceptionLog" />
 		</aop:aspect>
 	</aop:config>
 	
