@@ -20,7 +20,7 @@ public class AfterThrowingAdvice {
 		
 	}
 	
-	@AfterThrowing(pointcut="allPointcut()", throwing="excepObj")
+	@AfterThrowing(pointcut="allPointcut()", throwing="exceptObj")
 	public void exceptionLog(JoinPoint jp, Exception exceptObj) {
 		String method = jp.getSignature().getName();
 		
