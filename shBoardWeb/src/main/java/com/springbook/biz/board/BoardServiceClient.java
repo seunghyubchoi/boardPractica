@@ -19,7 +19,7 @@ public class BoardServiceClient {
 		vo.setTitle("새로운 제목");
 		vo.setWriter("고길동과 둘리");
 		vo.setContent("또치야 너 마이클이랑 어디로 도망쳤니");
-		boardService.insertBoard(vo);
+		//boardService.insertBoard(vo);
 		
 		// 4. 글 목록 검색 기능 테스트
 		List<BoardVO> boardList = boardService.getBoardList(vo);
