@@ -51,15 +51,17 @@
 	<% for(BoardVO board : boardList) { %>
 	<tr>
 		<td><%= board.getSeq() %></td>
-		<td align="left"><a href="getBoard.jsp?seq=<%= board.getSeq() %>"><%= board.getTitle() %></a></td>
-	</tr>
+		<td align="left"><a href="getBoard.jsp?seq=<%= board.getSeq() %>">
+												   <%= board.getTitle() %></a></td>
+	
 	<td><%= board.getWriter() %></td>
 	<td><%= board.getRegDate() %></td>
 	<td><%= board.getCnt() %></td>
+	</tr>
 	<% } %>
 </table>
 <br>
-<a href="inserBoard.jsp">새글 등록</a>
+<a href="insertBoard.jsp">새글 등록</a>
 
 </center>
 </body>

@@ -5,7 +5,7 @@
 
 <%
 	// 1. 사용자 입력 정보 추출
-	request.setCharacterEncoding("EUT-KR");
+	request.setCharacterEncoding("EUC-KR");
 	String title = request.getParameter("title");
 	String writer = request.getParameter("wrtier");
 	String content = request.getParameter("content");
