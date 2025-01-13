@@ -22,7 +22,7 @@ BoardVO board = boardDAO.getBoard(vo);
 					  "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset="EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>글 상세</title>
 </head>
 <body>
@@ -60,7 +60,7 @@ BoardVO board = boardDAO.getBoard(vo);
 </form>
 <hr>
 <a href="insertBoard.jsp">글등록</a>&nbsp;&nbsp;&nbsp;
-<a href="deleteBoard_proc.jsp">글삭제</a>&nbsp;&nbsp;&nbsp;
+<a href="deleteBoard_proc.jsp?seq=<%= board.getSeq()%>">글삭제</a>&nbsp;&nbsp;&nbsp;
 <a href="getBoardList.jsp">글목록</a>&nbsp;&nbsp;&nbsp;
 </center>
 </body>
