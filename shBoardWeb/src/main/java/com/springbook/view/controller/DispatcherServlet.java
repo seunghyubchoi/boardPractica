@@ -36,13 +36,14 @@ public class DispatcherServlet extends HttpServlet {
 	
 	private void process(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		// 1. 클라이언트의 요청 path 정보를 추출한다.
+		
 		String uri = request.getRequestURI();
 		String path  =uri.substring(uri.lastIndexOf("/"));
-		System.out.println(path);
+		//System.out.println(path);
 		
 		// 2. 클라이언트의 요청 path에 따라 적절히 분기처리 한다.
 		if(path.equals("/login.do")) {
-			System.out.println("로그인 처리");
+			//System.out.println("로그인 처리");
 			
 			// 1. 사용자 입력 정보 추출
 			String id = request.getParameter("id");
@@ -68,7 +69,7 @@ public class DispatcherServlet extends HttpServlet {
 			}
 			
 		} else if(path.equals("/logout.do")) {
-			System.out.println("로그아웃 처리");
+			//System.out.println("로그아웃 처리");
 			
 			HttpSession session = request.getSession();
 			session.invalidate();
@@ -76,7 +77,7 @@ public class DispatcherServlet extends HttpServlet {
 			response.sendRedirect("login.jsp");
 			
 		} else if(path.equals("/insertBoard.do")) {
-			System.out.println("글 등록 처리");
+			//System.out.println("글 등록 처리");
 			
 			// 1. 사용자 입력 정보 추출
 			request.setCharacterEncoding("EUC-KR");
@@ -97,7 +98,7 @@ public class DispatcherServlet extends HttpServlet {
 			response.sendRedirect("getBoardList.do");
 			
 		} else if(path.equals("/updateBoard.do")) {
-			System.out.println("글 수정 처리");
+			//System.out.println("글 수정 처리");
 			
 			String title = request.getParameter("title");
 			String content = request.getParameter("content");
@@ -114,7 +115,7 @@ public class DispatcherServlet extends HttpServlet {
 			response.sendRedirect("getBoardList.do");
 			
 		} else if(path.equals("/deleteBoard.do")) {
-			System.out.println("글 삭제 처리");
+			//System.out.println("글 삭제 처리");
 			
 			String seq = request.getParameter("seq");
 			
@@ -127,7 +128,7 @@ public class DispatcherServlet extends HttpServlet {
 			response.sendRedirect("getBoardList.do");
 			
 		} else if(path.equals("/getBoard.do")) {
-			System.out.println("글 상세 조회 처리");
+			//System.out.println("글 상세 조회 처리");
 
 			//1. 검색할 게시글 번호 추출
 			String seq = request.getParameter("seq");
@@ -145,7 +146,7 @@ public class DispatcherServlet extends HttpServlet {
 			response.sendRedirect("getBoard.jsp");
 			
 		} else if(path.equals("/getBoardList.do")) {
-			System.out.println("글 목록 검색 처리");
+			//System.out.println("글 목록 검색 처리");
 			// 1. 사용자 입력 정보 추출
 			// 2. DB 연동 처리
 			BoardVO vo = new BoardVO();
