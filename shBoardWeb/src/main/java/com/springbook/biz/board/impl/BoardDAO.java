@@ -89,7 +89,8 @@ public class BoardDAO {
 				board.setSeq(rs.getInt("SEQ"));
 				board.setTitle(rs.getString("TITLE"));
 				board.setWriter(rs.getString("WRITER"));
-				board.setContent(rs.getString("REGDATE"));
+				board.setContent(rs.getString("CONTENT"));
+				board.setRegDate(rs.getDate("REGDATE"));
 				board.setCnt(rs.getInt("CNT"));
 			}
 		} catch (Exception e) {
@@ -113,7 +114,8 @@ public class BoardDAO {
 				board.setSeq(rs.getInt("SEQ"));
 				board.setTitle(rs.getString("TITLE"));
 				board.setWriter(rs.getString("WRITER"));
-				board.setContent(rs.getString("REGDATE"));
+				board.setContent(rs.getString("Content"));
+				board.setRegDate(rs.getDate("REGDATE"));
 				board.setCnt(rs.getInt("CNT"));
 				boardList.add(board);
 			}
