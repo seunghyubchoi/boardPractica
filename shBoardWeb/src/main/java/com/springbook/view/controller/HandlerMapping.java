@@ -15,6 +15,9 @@ public class HandlerMapping {
 	private Map<String, Controller> mappings;
 	
 	public HandlerMapping() {
+		
+		System.out.println("HandlerMapping »£√‚");
+		
 		mappings = new HashMap<String, Controller>();
 		mappings.put("/login.do", new LoginController());
 		mappings.put("/getBoardList.do", new GetBoardListController());
