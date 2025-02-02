@@ -4,7 +4,7 @@
 					  "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset="EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>로그인</title>
 </head>
 <body>
