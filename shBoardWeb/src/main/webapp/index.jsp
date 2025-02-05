@@ -4,7 +4,7 @@
 					  "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset="EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Main Page</title>
 </head>
 <body>
@@ -13,6 +13,7 @@
 	<hr>
 		<a href="login.do">로그인</a><br><br><br>
 		<a href="getBoardList.do">글 목록 바로가기</a>
+		<a href="dataTransform.do">글 목록 변환 처리</a>
 	<hr>
 </center>
 </body>

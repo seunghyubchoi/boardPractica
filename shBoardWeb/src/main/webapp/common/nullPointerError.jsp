@@ -17,7 +17,7 @@
     <br>
     <table width="100%" border="1" cellspacing="0" cellpadding="0" align="center">
         <tr>
-            <td>
+            <td align="center">
                 <br><br><br><br><br>
                 Message: ${exception.message}
                 <br><br><br><br><br>
