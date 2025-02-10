@@ -43,68 +43,10 @@
 		<aop:pointcut expression="execution(* com.springbook.biz..*(..))" id="txPointcut"/>
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
 	</aop:config>
-	
-<!-- 	<bean id="log" class="com.springbook.biz.common.LogAdvice"></bean>
-	<bean id="before" class="com.springbook.biz.common.BeforeAdvice"></bean>
-	<bean id="afterReturning" class="com.springbook.biz.common.AfterReturningAdvice"></bean>
-	<bean id="afterThrowing" class="com.springbook.biz.common.AfterThrowingAdvice"></bean>
-	<bean id="after" class="com.springbook.biz.common.AfterAdvice"></bean>
-	<bean id="around" class="com.springbook.biz.common.AroundAdvice"></bean> -->
-	
-<!-- 	<aop:config>
-		<aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))" /> 
-		<aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))" />
-		<aop:aspect ref="around">
-			<aop:after pointcut-ref="getPointcut" method="printLog" />
-			<aop:before pointcut-ref="allPointcut" method="beforeLog" />
-			<aop:after-returning pointcut-ref="getPointcut" method="afterLog" returning="returnObj"/>
-			<aop:after-throwing pointcut-ref="allPointcut" method="exceptionLog" throwing="exceptObj" />
-			<aop:around pointcut-ref="allPointcut" method="aroundLog" />
-		</aop:aspect>
-		<aop:aspect ref="after">
-			<aop:after pointcut-ref="allPointcut" method="finallyLog" />
-		</aop:aspect>
-	</aop:config> -->
-	
-	
-<!-- 	<bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl">
-		<property name="userDAO" ref="userDAO" />
-	</bean>
-	
-	<bean id="userDAO" class="com.springbook.biz.user.impl.UserDAO"></bean> -->
 
-	<!-- <bean id="tv" class="polymorphism.SamsungTV" lazy-init="true" init-method="initMethod" destroy-method="destroyMethod"/> -->
-
-    <!-- 	
-    setter 인젝션 사용으로 생성자 인젝션 주석처리
-    <bean id="tv" class="polymorphism.SamsungTV">
-		<constructor-arg ref="apple"></constructor-arg>
-		<constructor-arg value="2700000"></constructor-arg>
-	</bean> 
-	-->
-	
-	<!-- 
-	<context:component-scan base-package="polymorphism"></context:component-scan>
-	<bean class="polymorphism.AppleSpeaker"></bean> 
-	-->
-	
-	<!-- component-scan 으로 주석처리
-	<bean id="tv" class="polymorphism.SamsungTV" p:speaker-ref="sony" p:price="2700000">
-    	//p 네임스페이스 추가로 주석처리	
-		<property name="speaker" ref="apple"></property>
-		<property name="price" value="2700000"></property> 
+	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:sql-map-config.xml"/>
 	</bean>
 	
-	<bean id="apple" class="polymorphism.AppleSpeaker"></bean>
-	<bean id="sony" class="polymorphism.SonySpeaker"></bean>
-	
-	<bean id="collectionBean" class="com.springbook.ioc.injection.CollectionBean">
-		<property name="addressList">
-			<list>
-				<value>서울시 강남구 역삼동</value>
-				<value>서울시 성동구 행당동</value>
-			</list>
-		</property>
-	</bean>
-	-->
 </beans>
